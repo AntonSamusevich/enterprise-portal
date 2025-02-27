@@ -76,7 +76,7 @@ const Login = () => {
               {error.password && <p className='error-text'>Введите пароль</p>}
               <button className= 'login-button' type='submit'>Войти</button>
               <p className='register-link'>
-                <Link to="/register">Нет аккаунта? Зарегистрироваться</Link>
+                <Link to="/enterprise-portal/register">Нет аккаунта? Зарегистрироваться</Link>
               </p>
             </form>
           </div> 
