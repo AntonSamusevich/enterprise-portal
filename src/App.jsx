@@ -9,7 +9,7 @@ function App() {
     <Router basename={process.env.NODE_ENV === 'production' ? '/enterprise-portal' : '/'}>
       <Scroll />
       <Routes>
-        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Login />} /> 
         <Route path='/register' element={<Register />} />
       </Routes>
     </Router>
