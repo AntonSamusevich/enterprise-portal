@@ -6,8 +6,8 @@ import Scroll from './scripts/Scroll';
 
 function App() {
   return (
-    <Router>
-      <Scroll/>
+    <Router basename={process.env.NODE_ENV === 'production' ? '/enterprise-portal' : '/'}>
+      <Scroll />
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />

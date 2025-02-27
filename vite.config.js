@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 
 export default defineConfig({
-  base: "/enterprise-portal/",
+  base: process.env.NODE_ENV === 'production' ? '/enterprise-portal/' : '/',
   plugins: [react()],
-})
+});
