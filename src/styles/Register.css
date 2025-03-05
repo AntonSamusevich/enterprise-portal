@@ -1,15 +1,18 @@
-body {
-  background-color: #E1E4E9;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #E1E4E9;
+  overflow-x: auto;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1; 
+  flex-grow: 1;
   min-height: 100vh;
+  min-width: 1160px;
 }
 
 .register-box {
@@ -88,7 +91,7 @@ input {
 input:focus {
   border: 1.5px solid #31A3C6;
   box-shadow: 0px 0px 5px rgba(49, 163, 198, 0.6);
-  outline: none; 
+  outline: none;
 }
 
 .input-fields {
@@ -134,7 +137,7 @@ select {
   background-image: url('../svg/arrow.svg');
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-size: 14px 14px;
+  background-size: 13px 13px;
 }
 
 select:focus {
@@ -225,6 +228,8 @@ button:hover {
 
 footer {
   width: 100%;
+  min-width: 1160px;
+  position: relative;
   height: 70px;
   background-color: #9B9999;
   color: white;
@@ -241,6 +246,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 }
 
 .social-networks {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Register.css'; 
+import '../styles/Register.css';
 import { Link } from 'react-router-dom';
 import registerImage from '../images/register-image.jpg';
 import facebookIcon from '../svg/facebook.svg';
@@ -110,7 +110,7 @@ const Register = () => {
                     <option value='Marketing'>Маркетинг</option>
                     <option value='Finance'>Финансы</option>
                   </select>
-                  {error.department && <p className='error-text'>Выберите подразделение</p>}  
+                  {error.department && <p className='error-text'>Выберите подразделение</p>}
                 </div>
                 <div className='email'>
                   <label>Электронная почта</label>
