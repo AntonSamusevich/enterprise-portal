@@ -11,7 +11,7 @@ body {
   width: 100%;
   min-width: 1160px;
   position: relative;
-  height: 90px;
+  height: 70px;
   background-color: white;
   color: black;
   display: flex;
@@ -44,15 +44,10 @@ body {
 }
 
 .user-panel {
+  position: relative; 
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 30px;
-}
-
-.bell-icon {
-  width: 18px;
-  height: 21px;
 }
 
 .bell-wrapper {
@@ -64,11 +59,87 @@ body {
   cursor: pointer;
 }
 
+.bell-icon {
+  width: 18px;
+  height: 21px;
+}
+
+.bell-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 240px;
+  height: 300px;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400px;
+}
+
+.bell-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.avatar-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
 .avatar {
   width: 45px;
   height: 45px;
-  border-radius: 30px;
+  border-radius: 50%;
   cursor: pointer;
+}
+
+.avatar-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 160px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.avatar-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.avatar-menu ul li {
+  cursor: pointer;
+}
+
+.avatar-menu ul li:hover {
+  background: #EEEDED;
+}
+
+.avatar-text {
+  text-decoration: none;
+  color: black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400px;
 }
 
 .nav ul {
@@ -102,7 +173,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1160px;
-  margin: 20px 0 140px 0;
+  margin: 20px 0 160px 0;
   min-height: 100vh;
 }
 
@@ -166,12 +237,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.menu-icon-wrapper {
-  width: auto;
-  height: auto;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 .main-content {
@@ -264,6 +330,7 @@ body {
   font-size: 15px;
   padding: 0;
   margin: 25px 0 25px 20px;
+  height: 18px;
 }
 
 .news-container {
@@ -292,7 +359,9 @@ body {
   font-weight: 500;
   font-size: 14px;
   margin: 0;
-  padding: 10px 0;
+  margin: 10px 0 8px 0;
+  height: 34px;
+  overflow: hidden;
 }
 
 .news-item p {
@@ -300,6 +369,8 @@ body {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 15px;
+  height: 85px;
+  overflow: hidden;
 }
 
 .right-panel {
@@ -313,6 +384,18 @@ body {
   height: 360px;
   background-color: white;
   border-radius: 5px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.open-button {
+  width: 130px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 30px 0 25px 0;
 }
 
 .home-footer {

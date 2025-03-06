@@ -1,8 +1,8 @@
-import React from 'react';
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from "react";
 import news1Image from '../images/news1.jpg';
-import news2mage from '../images/news2.jpg';
+import news2Image from '../images/news2.jpg';
 import news3Image from '../images/news3.jpg';
 import mainImage from '../images/main-image.png';
 import avatarImage from '../images/avatar.png';
@@ -23,6 +23,7 @@ import requestsIcon from '../svg/requests.svg';
 import servicesIcon from '../svg/services.svg';
 import supportIcon from '../svg/support.svg';
 import settingsIcon from '../svg/settings.svg';
+import logoutIcon from '../svg/logout.svg';
 import vkontakteIcon from '../svg/vkontakte.svg';
 import telegramIcon from '../svg/telegram.svg';
 import instagramIcon from '../svg/instagram.svg';
@@ -30,28 +31,108 @@ import facebookIcon from '../svg/facebook.svg';
 import twitterIcon from '../svg/twitter.svg';
 
 const Home = () => {
+
+  const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
+  const [isBellMenuOpen, setIsBellMenuOpen] = useState(false);
+
+  const avatarMenuRef = useRef(null);
+  const bellMenuRef = useRef(null);
+
+  const toggleAvatarMenu = () => {
+    if (isBellMenuOpen) {
+      setIsBellMenuOpen(false);
+    }
+    setIsAvatarMenuOpen((prev) => !prev);
+  };
+
+  const toggleBellMenu = () => {
+    if (isAvatarMenuOpen) {
+      setIsAvatarMenuOpen(false);
+    }
+    setIsBellMenuOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        (avatarMenuRef.current && !avatarMenuRef.current.contains(event.target)) &&
+        (bellMenuRef.current && !bellMenuRef.current.contains(event.target))
+      ) {
+        setIsAvatarMenuOpen(false);
+        setIsBellMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <header className="header">
-        <div className='header-content'>
+        <div className="header-content">
           <Link to="/home" className="logo-wrapper">
             <img src={logoIcon} alt="Лого" className="logo" />
           </Link>
           <nav className="nav">
             <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Компания</a></li>
-              <li><a href="#">Сотрудники</a></li>
-              <li><a href="#">База знаний</a></li>
-              <li><a href="#">Обучение</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><Link to="#">Главная</Link></li>
+              <li><Link to="#">Компания</Link></li>
+              <li><Link to="#">Сотрудники</Link></li>
+              <li><Link to="#">База знаний</Link></li>
+              <li><Link to="#">Обучение</Link></li>
+              <li><Link to="#">Контакты</Link></li>
             </ul>
           </nav>
           <div className="user-panel">
-            <div className="bell-wrapper">
+            <div className="bell-wrapper" onClick={toggleBellMenu} ref={bellMenuRef}>
               <img src={bellIcon} alt="Уведомления" className="bell-icon" />
+              {isBellMenuOpen && (
+                <div className="bell-menu">
+                  <ul>
+                    <li>
+                      <p>Новых уведомлений нет</p>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
-            <img src={avatarImage} alt="Аватар" className="avatar" />
+            <div className="avatar-wrapper" onClick={toggleAvatarMenu} ref={avatarMenuRef}>
+              <img src={avatarImage} alt="Аватар" className="avatar" />
+              {isAvatarMenuOpen && (
+                <div className="avatar-menu">
+                  <ul>
+                    <li>
+                      <a href="#" className="avatar-text">
+                        <div className="menu-icon-wrapper">
+                          <img src={profilelIcon} alt="Профиль" />
+                        </div>
+                        <p>Профиль</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="avatar-text">
+                        <div className="menu-icon-wrapper">
+                          <img src={settingsIcon} alt="Настройки" />
+                        </div>
+                        <p>Настройки</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/enterprise-portal/" className="avatar-text">
+                        <div className="menu-icon-wrapper">
+                          <img src={logoutIcon} alt="Выйти" />
+                        </div>
+                        <p>Выйти</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </header>
@@ -64,7 +145,7 @@ const Home = () => {
                   <div className="menu-icon-wrapper">
                     <img src={profilelIcon} alt="Профиль" />
                   </div>
-                  <p>Мой профиль</p>
+                  <p>Профиль</p>
                 </a>
               </li>
               <li className="menu-item">
@@ -205,7 +286,7 @@ const Home = () => {
                   <p>Физическая активность помогает не только поддерживать здоровье, но и снижать стресс</p>
                 </div>
                 <div className="news-item">
-                  <img src={news2mage} alt="Новость 2" />
+                  <img src={news2Image} alt="Новость 2" />
                   <h3>Бесплатное обучение для всех сотрудников</h3>
                   <p>Компании все чаще предлагают обучение, которое помогает сотрудникам расти и осваивать новые навыки</p>
                 </div>
@@ -219,8 +300,11 @@ const Home = () => {
           </main>
           <aside className="right-panel">
             <div className="right-block">
+
+              <button className="open-button">Открыть</button>
             </div>
             <div className="right-block">
+              <button className="open-button">Открыть</button>
             </div>
           </aside>
         </div>
