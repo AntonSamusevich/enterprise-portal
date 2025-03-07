@@ -1,13 +1,12 @@
-import '../styles/Home.css';
+import '../styles/Profile.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
-import news1Image from '../images/news1.jpg';
-import news2Image from '../images/news2.jpg';
-import news3Image from '../images/news3.jpg';
-import mainImage from '../images/main-image.png';
 import avatarImage from '../images/avatar.png';
 import bellIcon from '../svg/bell.svg';
 import logoIcon from '../svg/logo-ft.svg';
+import capIcon from '../svg/cap.svg'
+import graphIcon from '../svg/graph.svg'
+import timeIcon from '../svg/time.svg'
 import profilelIcon from '../svg/profile.svg';
 import calendarIcon from '../svg/calendar.svg';
 import messagesIcon from '../svg/messages.svg';
@@ -30,7 +29,7 @@ import instagramIcon from '../svg/instagram.svg';
 import facebookIcon from '../svg/facebook.svg';
 import twitterIcon from '../svg/twitter.svg';
 
-const Home = () => {
+const Profile = () => {
 
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
   const [isBellMenuOpen, setIsBellMenuOpen] = useState(false);
@@ -136,8 +135,8 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <div className='home-container'>
-        <div className='home-content'>
+      <div className='profile-container'>
+        <div className='profile-content'>
           <aside className='left-panel'>
             <ul className='menu-list'>
               <li className='menu-item'>
@@ -264,51 +263,88 @@ const Home = () => {
               </li>
             </ul>
           </aside>
-          <main className='main-home-content'>
-            <div className='first-block'>
-              <img src={mainImage} alt='Главное изображение' className='main-image' />
-              <div className='overlay'>
-                <div className='text-content'>
-                  <div className='main-text'>
-                    <h2>Поставить антивирус стало еще легче</h2>
-                    <p>Новая разработка отдела информационных технологий и связи</p>
+          <main className='main-profile-content'>
+            <div className='profile-block'>
+              <div className='profile-elements'>
+                <img src={avatarImage} alt='Аватар' className='profile-image' />
+                <div className='profile-text'>
+                  <div className='full-name'>
+                    <h3>Фамилия</h3>
+                    <h3>Имя</h3>
+                    <h3>Отчество</h3>
                   </div>
-                  <button className='main-button'>Подробнее</button>
+                  <div className='main-information'>
+                    <div className='information'>
+                      <p className='name-left'>Должность</p>
+                      <p className='name-right'>Не указано</p>
+                    </div>
+                    <div className='information'>
+                      <p className='name-left'>Отдел</p>
+                      <p className='name-right'>Не указано</p>
+                    </div>
+                    <div className='information'>
+                      <p className='name-left'>Мобильный</p>
+                      <p className='name-right'>Не указано</p>
+                    </div>
+                    <div className='information'>
+                      <p className='name-left'>Рабочий</p>
+                      <p className='name-right'>Не указано</p>
+                    </div>
+                    <div className='information'>
+                      <p className='name-left'>Почта</p>
+                      <p className='name-right'>Не указано</p>
+                    </div>
+                    <div className='information'>
+                      <p className='name-left'>День рождения</p>
+                      <p className='name-right'>Не указано</p>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div className='main-change'>
+                <p className='change-text'>Изменить</p>
+              </div>
             </div>
-            <div className='second-block'>
-              <h2>Новости</h2>
-              <div className='news-container'>
-                <div className='news-item'>
-                  <img src={news1Image} alt='Новость 1' />
-                  <h3>Спорт – это время заботы о себе</h3>
-                  <p>Физическая активность помогает не только поддерживать здоровье, но и снижать стресс</p>
+            <div className='other-content'>
+              <div className='other-block'>
+                <div className='other-wrapper'>
+                  <img src={capIcon} alt='Образование' className='cap-icon' />
                 </div>
-                <div className='news-item'>
-                  <img src={news2Image} alt='Новость 2' />
-                  <h3>Бесплатное обучение для всех сотрудников</h3>
-                  <p>Компании все чаще предлагают обучение, которое помогает сотрудникам расти и осваивать новые навыки</p>
+                <div className='other-text'>
+                  <h3>Образование</h3>
+                  <p>Не указано</p>
                 </div>
-                <div className='news-item'>
-                  <img src={news3Image} alt='Новость 3' />
-                  <h3>Как успевать все и даже больше?</h3>
-                  <p>Эффективное планирование, расстановка приоритетов и правильное распределение энергии – ключи к тому, чтобы успевать больше</p>
+              </div>
+              <div className='other-block'>
+                <div className='other-wrapper'>
+                  <img src={graphIcon} alt='Стаж' className='graph-icon' />
+                </div>
+                <div className='other-text'>
+                  <h3>Стаж работы в организации</h3>
+                  <p>Не указано</p>
+                </div>
+              </div>
+              <div className='other-block'>
+                <img src={avatarImage} alt='Руководитель' className='director-image' />
+                <div className='other-text'>
+                  <h3>Руководитель отдела</h3>
+                  <p>Не указано</p>
+                </div>
+              </div>
+              <div className='other-block'>
+                <div className='other-wrapper'>
+                  <img src={timeIcon} alt='Время' className='time-icon' />
+                </div>
+                <div className='other-text'>
+                  <h3>График работы</h3>
+                  <p>Не указано</p>
                 </div>
               </div>
             </div>
           </main>
-          <aside className='right-panel'>
-            <div className='right-block'>
-              <button className='open-button'>Открыть</button>
-            </div>
-            <div className='right-block'>
-              <button className='open-button'>Открыть</button>
-            </div>
-          </aside>
         </div>
       </div>
-      <footer className='home-footer'>
+      <footer className='profile-footer'>
         <div className='footer-content'>
           <p>© 2025. Все права защищены</p>
           <p>Техподдержка: +375 (17) 123-45-67</p>
@@ -335,4 +371,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Profile;

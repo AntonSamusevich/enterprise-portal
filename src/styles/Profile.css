@@ -162,14 +162,14 @@ body {
   color: #3496B5;
 }
 
-.home-container {
+.profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 1160px;
 }
 
-.home-content {
+.profile-content {
   display: flex;
   justify-content: space-between;
   width: 1160px;
@@ -240,165 +240,147 @@ body {
   margin-left: 10px;
 }
 
-.main-home-content {
+.main-profile-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.first-block {
-  width: 680px;
-  height: 360px;
+.profile-block {
+  width: 940px;
+  height: 320px;
   background-color: white;
   border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.first-block img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.first-block .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: end;
-}
-
-.text-content {
-  margin-left: 50px;
-}
-
-.first-block h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  padding: 0;
-}
-
-.first-block p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.main-text {
-  width: 250px;
-  color: #31A3C6;
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
-.main-button {
-  width: 170px;
-  height: 46px;
-  background-color: #31A3C6;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  border-radius: 5px;
-  margin: 0;
-  margin: 30px 0 50px 0;
-}
-
-.main-button:hover {
-  background-color: #3496B5;
-}
-
-.second-block {
-  width: 680px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.second-block h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  padding: 0;
-  margin: 25px 0 25px 20px;
-  height: 18px;
-}
-
-.news-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 20px;
 }
 
-.news-item {
-  width: 200px;
+.main-change {
+  margin: 0;
+  padding: 15px 20px 0 0;
+}
+
+.change-text {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.profile-elements {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 40px 0 0 40px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-text {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  padding-bottom: 40px;
 }
 
-.news-item img {
-  width: 200px;
-  height: 140px;
-  border-radius: 5px;
-  object-fit: cover;
-  margin: 0;
+.main-information {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.news-item h3 {
+.information {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.name-left {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  margin: 0;
-  margin: 10px 0 8px 0;
-  height: 34px;
-  overflow: hidden;
+  font-size: 15px;
+  width: 120px;
 }
 
-.news-item p {
+.name-right p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 15px;
-  height: 85px;
-  overflow: hidden;
+  font-size: 15px;
+  width: 112px;
 }
 
-.right-panel {
+.full-name {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.full-name h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+}
+
+.other-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 20px;
 }
 
-.right-block {
-  width: 240px;
-  height: 360px;
-  background-color: white;
-  border-radius: 5px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
+.other-content h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
 }
 
-.open-button {
-  width: 130px;
-  height: 36px;
+.other-content p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  margin: 30px 0 25px 0;
 }
 
-.home-footer {
+.other-block {
+  width: 460px;
+  height: 140px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.other-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.director-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+.other-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-footer {
   width: 100%;
   min-width: 1160px;
   position: relative;
