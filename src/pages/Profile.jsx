@@ -79,11 +79,11 @@ const Profile = () => {
           <nav className='nav'>
             <ul>
               <li><Link to='/home'>Главная</Link></li>
-              <li><Link to='#'>Новости</Link></li>
-              <li><Link to='#'>Сотрудники</Link></li>
-              <li><Link to='#'>База знаний</Link></li>
-              <li><Link to='#'>Обучение</Link></li>
-              <li><Link to='#'>Контакты</Link></li>
+              <li><Link to='/news'>Новости</Link></li>
+              <li><Link to='/employees'>Сотрудники</Link></li>
+              <li><Link to='/knowledge'>База знаний</Link></li>
+              <li><Link to='/education'>Обучение</Link></li>
+              <li><Link to='/contacts'>Контакты</Link></li>
             </ul>
           </nav>
           <div className='user-panel'>
@@ -105,28 +105,28 @@ const Profile = () => {
                 <div className='avatar-menu'>
                   <ul>
                     <li>
-                      <a href='/enterprise-portal/profile' className='avatar-text'>
-                        <div className='menu-icon-wrapper'>
-                          <img src={profilelIcon} alt='Профиль' />
+                      <Link to="/profile" className="avatar-text">
+                        <div className="menu-icon-wrapper">
+                          <img src={profilelIcon} alt="Профиль" />
                         </div>
                         <p>Профиль</p>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href='#' className='avatar-text'>
-                        <div className='menu-icon-wrapper'>
-                          <img src={settingsIcon} alt='Настройки' />
+                      <Link to="/settings" className="avatar-text">
+                        <div className="menu-icon-wrapper">
+                          <img src={settingsIcon} alt="Настройки" />
                         </div>
                         <p>Настройки</p>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href='/enterprise-portal/' className='avatar-text'>
-                        <div className='menu-icon-wrapper'>
-                          <img src={logoutIcon} alt='Выйти' />
+                      <Link to="/" className="avatar-text">
+                        <div className="menu-icon-wrapper">
+                          <img src={logoutIcon} alt="Выйти" />
                         </div>
                         <p>Выйти</p>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -140,126 +140,126 @@ const Profile = () => {
           <aside className='left-panel'>
             <ul className='menu-list'>
               <li className='menu-item'>
-                <a href='/enterprise-portal/profile' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={profilelIcon} alt='Профиль' />
+                <Link to="/profile" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={profilelIcon} alt="Профиль" />
                   </div>
                   <p>Профиль</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={calendarIcon} alt='Календарь' />
+              <li className="menu-item">
+                <Link to="/calendar" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={calendarIcon} alt="Календарь" />
                   </div>
                   <p>Календарь</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={messagesIcon} alt='Сообщения' />
+              <li className="menu-item">
+                <Link to="/messages" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={messagesIcon} alt="Сообщения" />
                   </div>
                   <p>Сообщения</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={callsIcon} alt='Звонки' />
+              <li className="menu-item">
+                <Link to="/calls" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={callsIcon} alt="Звонки" />
                   </div>
                   <p>Звонки</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={groupsIcon} alt='Группы' />
+              <li className="menu-item">
+                <Link to="/groups" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={groupsIcon} alt="Группы" />
                   </div>
                   <p>Группы</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={emailIcon} alt='Почта' />
+              <li className="menu-item">
+                <Link to="/email" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={emailIcon} alt="Почта" />
                   </div>
                   <p>Почта</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={scheduleIcon} alt='График' />
+              <li className="menu-item">
+                <Link to="/schedule" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={scheduleIcon} alt="График" />
                   </div>
                   <p>График</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={tasksIcon} alt='Задачи' />
+              <li className="menu-item">
+                <Link to="/tasks" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={tasksIcon} alt="Задачи" />
                   </div>
                   <p>Задачи</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={eventsIcon} alt='События' />
+              <li className="menu-item">
+                <Link to="/events" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={eventsIcon} alt="События" />
                   </div>
                   <p>События</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={galleryIcon} alt='Фотогалерея' />
+              <li className="menu-item">
+                <Link to="/gallery" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={galleryIcon} alt="Фотогалерея" />
                   </div>
                   <p>Фотогалерея</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={documentsIcon} alt='Документы' />
+              <li className="menu-item">
+                <Link to="/documents" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={documentsIcon} alt="Документы" />
                   </div>
                   <p>Документы</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={requestsIcon} alt='Заявки' />
+              <li className="menu-item">
+                <Link to="/requests" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={requestsIcon} alt="Заявки" />
                   </div>
                   <p>Заявки</p>
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className='support-list'>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={servicesIcon} alt='Сервисы' />
+              <li className="menu-item">
+                <Link to="/services" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={servicesIcon} alt="Сервисы" />
                   </div>
                   <p>Сервисы</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={supportIcon} alt='Поддержка' />
+              <li className="menu-item">
+                <Link to="/support" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={supportIcon} alt="Поддержка" />
                   </div>
                   <p>Поддержка</p>
-                </a>
+                </Link>
               </li>
-              <li className='menu-item'>
-                <a href='#' className='menu-link'>
-                  <div className='menu-icon-wrapper'>
-                    <img src={settingsIcon} alt='Настройки' />
+              <li className="menu-item">
+                <Link to="/settings" className="menu-link">
+                  <div className="menu-icon-wrapper">
+                    <img src={settingsIcon} alt="Настройки" />
                   </div>
                   <p>Настройки</p>
-                </a>
+                </Link>
               </li>
             </ul>
           </aside>
