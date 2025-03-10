@@ -10,7 +10,6 @@ body {
 .header {
   width: 100%;
   min-width: 1160px;
-  position: relative;
   height: 70px;
   background-color: white;
   color: black;
