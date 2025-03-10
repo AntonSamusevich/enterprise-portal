@@ -105,10 +105,15 @@ const Register = () => {
                     className={error.department ? 'error' : ''}
                   >
                     <option value=''>Не выбрано</option>
-                    <option value='IT'>IT</option>
-                    <option value='HR'>HR</option>
-                    <option value='Marketing'>Маркетинг</option>
-                    <option value='Finance'>Финансы</option>
+                    <option value='1'>Отдел ИТиС</option>
+                    <option value='2'>Отдел кадров</option>
+                    <option value='3'>Бухгалтерия</option>
+                    <option value='4'>Маркетинговый отдел</option>
+                    <option value='5'>Коммерческий отдел</option>
+                    <option value='6'>Отдел продаж</option>
+                    <option value='7'>Юридический отдел</option>
+                    <option value='8'>Отдел логистики</option>
+                    <option value='9'>Отдел управления качеством</option>
                   </select>
                   {error.department && <p className='error-text'>Выберите подразделение</p>}
                 </div>

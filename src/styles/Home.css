@@ -186,6 +186,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .left-panel ul {
@@ -254,6 +255,7 @@ body {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .first-block img {
@@ -322,6 +324,7 @@ body {
   width: 680px;
   background-color: white;
   border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .second-block h2 {
@@ -387,6 +390,7 @@ body {
   display: flex;
   align-items: end;
   justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .open-button {
