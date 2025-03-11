@@ -315,6 +315,12 @@ const Home = () => {
               <p>Начальник отдела: <a href="tel: 1027">1027</a></p>
               <p>Почта: <a href="mailto:quality@ft.by">quality@ft.by</a></p>
             </div>
+            <div className="contacts-block">
+              <h2>Служба безопасности</h2>
+              <p>Телефон: <a href="tel: 1028">1028</a></p>
+              <p>Начальник отдела: <a href="tel: 1029">1029</a></p>
+              <p>Почта: <a href="mailto:security@ft.by">security@ft.by</a></p>
+            </div>
           </main>
         </div>
       </div>

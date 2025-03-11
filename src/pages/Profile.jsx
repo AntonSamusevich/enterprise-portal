@@ -271,7 +271,6 @@ const Profile = () => {
                   <div className='full-name'>
                     <h3>Фамилия</h3>
                     <h3>Имя</h3>
-                    <h3>Отчество</h3>
                   </div>
                   <div className='main-information'>
                     <div className='information'>
