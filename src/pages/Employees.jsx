@@ -1,10 +1,6 @@
-import '../styles/Home.css';
+import '../styles/Employees.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
-import news1Image from '../images/news1.jpg';
-import news2Image from '../images/news2.jpg';
-import news3Image from '../images/news3.jpg';
-import mainImage from '../images/main-image.png';
 import avatarImage from '../images/avatar.png';
 import bellIcon from '../svg/bell.svg';
 import logoIcon from '../svg/logo-ft.svg';
@@ -30,13 +26,19 @@ import instagramIcon from '../svg/instagram.svg';
 import facebookIcon from '../svg/facebook.svg';
 import twitterIcon from '../svg/twitter.svg';
 
-const Home = () => {
+const Employees = () => {
 
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
   const [isBellMenuOpen, setIsBellMenuOpen] = useState(false);
 
   const avatarMenuRef = useRef(null);
   const bellMenuRef = useRef(null);
+
+  const [activePage, setActivePage] = useState(1);
+
+  const handlePageClick = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
 
   const toggleAvatarMenu = () => {
     if (isBellMenuOpen) {
@@ -136,8 +138,8 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <div className='home-container'>
-        <div className='home-content'>
+      <div className='employees-container'>
+        <div className='employees-content'>
           <aside className='left-panel'>
             <ul className='menu-list'>
               <li className='menu-item'>
@@ -264,51 +266,98 @@ const Home = () => {
               </li>
             </ul>
           </aside>
-          <main className='main-home-content'>
-            <div className='first-block'>
-              <img src={mainImage} alt='Главное изображение' className='main-image' />
-              <div className='overlay'>
-                <div className='text-content'>
-                  <div className='main-text'>
-                    <h2>Поставить антивирус стало еще легче</h2>
-                    <p>Новая разработка отдела информационных технологий и связи</p>
-                  </div>
-                  <button className='main-button'>Подробнее</button>
+          <main className='main-employees-content'>
+            <div className='emloyees-search-bar'>
+              <input className='emloyees-input' type='text' placeholder='Поиск сотрудника...' />
+              <select className='emloyees-select'>
+                <option value=''>Все подразделения</option>
+                <option value='1'>Отдел ИТиС</option>
+                <option value='2'>Отдел кадров</option>
+                <option value='3'>Бухгалтерия</option>
+                <option value='4'>Маркетинговый отдел</option>
+                <option value='5'>Коммерческий отдел</option>
+                <option value='6'>Отдел продаж</option>
+                <option value='7'>Юридический отдел</option>
+                <option value='8'>Отдел логистики</option>
+                <option value='9'>Управление качеством</option>
+                <option value='10'>Служба безопасности</option>
+              </select>
+              <button className='emloyees-search-button'>Поиск</button>
+            </div>
+            <div className='employees-blocks'>
+              <div className='employees-block'>
+                <img src={avatarImage} alt='Аватар' className='employees-image' />
+                <div className='employees-info'>
+                  <h3>Имя Фамилия</h3>
+                  <p>Должность: инженер</p>
+                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
+                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+                </div>
+              </div>
+              <div className='employees-block'>
+                <img src={avatarImage} alt='Аватар' className='employees-image' />
+                <div className='employees-info'>
+                  <h3>Имя Фамилия</h3>
+                  <p>Должность: инженер</p>
+                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
+                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+                </div>
+              </div>
+              <div className='employees-block'>
+                <img src={avatarImage} alt='Аватар' className='employees-image' />
+                <div className='employees-info'>
+                  <h3>Имя Фамилия</h3>
+                  <p>Должность: инженер</p>
+                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
+                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+                </div>
+              </div>
+              <div className='employees-block'>
+                <img src={avatarImage} alt='Аватар' className='employees-image' />
+                <div className='employees-info'>
+                  <h3>Имя Фамилия</h3>
+                  <p>Должность: инженер</p>
+                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
+                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+                </div>
+              </div>
+              <div className='employees-block'>
+                <img src={avatarImage} alt='Аватар' className='employees-image' />
+                <div className='employees-info'>
+                  <h3>Имя Фамилия</h3>
+                  <p>Должность: инженер</p>
+                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
+                  <p>Телефон: <a href='tel:1234'>1234</a></p>
                 </div>
               </div>
             </div>
-            <div className='second-block'>
-              <h2>Новости</h2>
-              <div className='news-container'>
-                <div className='news-item'>
-                  <img src={news1Image} alt='Новость 1' />
-                  <h3>Спорт – это время заботы о себе</h3>
-                  <p>Физическая активность помогает не только поддерживать здоровье, но и снижать стресс</p>
-                </div>
-                <div className='news-item'>
-                  <img src={news2Image} alt='Новость 2' />
-                  <h3>Бесплатное обучение для всех сотрудников</h3>
-                  <p>Компании все чаще предлагают обучение, которое помогает сотрудникам расти и осваивать новые навыки</p>
-                </div>
-                <div className='news-item'>
-                  <img src={news3Image} alt='Новость 3' />
-                  <h3>Как успевать все и даже больше?</h3>
-                  <p>Эффективное планирование, расстановка приоритетов и правильное распределение энергии – ключи к тому, чтобы успевать больше</p>
-                </div>
-              </div>
+            <div className='employees-pagination'>
+              <a
+                href='#'
+                className={activePage === 1 ? 'active' : ''}
+                onClick={() => handlePageClick(1)}
+              >
+                1
+              </a>
+              <a
+                href='#'
+                className={activePage === 2 ? 'active' : ''}
+                onClick={() => handlePageClick(2)}
+              >
+                2
+              </a>
+              <a
+                href='#'
+                className={activePage === 3 ? 'active' : ''}
+                onClick={() => handlePageClick(3)}
+              >
+                3
+              </a>
             </div>
           </main>
-          <aside className='right-panel'>
-            <div className='right-block'>
-              <button className='open-button'>Открыть</button>
-            </div>
-            <div className='right-block'>
-              <button className='open-button'>Открыть</button>
-            </div>
-          </aside>
         </div>
       </div>
-      <footer className='home-footer'>
+      <footer className='employees-footer'>
         <div className='footer-content'>
           <p>© 2025. Все права защищены</p>
           <p>Техподдержка: +375 (17) 123-45-67</p>
@@ -335,4 +384,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Employees;

@@ -113,7 +113,8 @@ const Register = () => {
                     <option value='6'>Отдел продаж</option>
                     <option value='7'>Юридический отдел</option>
                     <option value='8'>Отдел логистики</option>
-                    <option value='9'>Отдел управления качеством</option>
+                    <option value='9'>Управление качеством</option>
+                    <option value='10'>Служба безопасности</option>
                   </select>
                   {error.department && <p className='error-text'>Выберите подразделение</p>}
                 </div>

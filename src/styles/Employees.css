@@ -43,7 +43,7 @@ body {
 }
 
 .user-panel {
-  position: relative; 
+  position: relative;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -161,14 +161,14 @@ body {
   color: #3496B5;
 }
 
-.education-container {
+.employees-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 1160px;
 }
 
-.education-content {
+.employees-content {
   display: flex;
   justify-content: space-between;
   width: 1160px;
@@ -208,90 +208,148 @@ body {
   font-size: 14px;
 }
 
-.main-education-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
+.menu-list {
+  margin: 0;
+}
+
+.support-list {
+  margin: 0;
+}
+
+.menu-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.menu-link:hover {
+  background-color: #EEEDED;
+  width: 180px;
+}
+
+.menu-icon-wrapper {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.main-employees-content {
+  display: flex;
+  flex-direction: column;
   margin-left: 20px;
-  height: 740px;
   width: 940px;
 }
 
-.education-block {
+.emloyees-search-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.emloyees-input {
+  width: 600px;
+  height: 40px;
+  border: 1px solid #B0AAAA;
+}
+
+.emloyees-select {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  width: 220px;
+  height: 40px;
+  border: 1px solid #B0AAAA;
+}
+
+.emloyees-search-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 40px;
+}
+
+.employees-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.employees-block {
   background-color: white;
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.education-text {
+.employees-info {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  gap: 8px;
 }
 
-.education-button {
-  width: 140px;
-  height: 36px;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.education-block h2 {
+.employees-info h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  width: 270px;
-  height: 18px;
-  margin: 15px 0;
-  padding: 0;
-  overflow: hidden;
+  font-size: 15px;
+  margin: 0;
 }
 
-.education-block p {
+.employees-info p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  width: 270px;
-  height: 50px;
-  margin-bottom: 15px;
-  overflow: hidden;
+  margin: 0;
 }
 
-.education-block a {
+.employees-info a {
   text-decoration: none;
   color: #1D446F;
 }
 
-.education-block img {
-  width: 270px;
-  height: 180px;
-  object-fit: cover;
+.employees-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
-.education-group {
+.employees-pagination {
+  margin-top: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 45px;
+  justify-content: center;
+  gap: 10px;
 }
 
-.education-group p {
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  color: #5e5a5a;
-
+.employees-pagination a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #B0AAAA; 
+  color: black; 
+  background: white;
 }
 
-.education-footer {
+.employees-pagination a.active {
+  background: #31A3C6; 
+  color: white; 
+  border: none; 
+}
+
+.employees-footer {
   width: 100%;
   min-width: 1160px;
   position: relative;

@@ -26,7 +26,7 @@ import instagramIcon from '../svg/instagram.svg';
 import facebookIcon from '../svg/facebook.svg';
 import twitterIcon from '../svg/twitter.svg';
 
-const Home = () => {
+const Contacts = () => {
 
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
   const [isBellMenuOpen, setIsBellMenuOpen] = useState(false);
@@ -102,25 +102,25 @@ const Home = () => {
                 <div className='avatar-menu'>
                   <ul>
                     <li>
-                      <Link to="/profile" className="avatar-text">
-                        <div className="menu-icon-wrapper">
-                          <img src={profilelIcon} alt="Профиль" />
+                      <Link to='/profile' className='avatar-text'>
+                        <div className='menu-icon-wrapper'>
+                          <img src={profilelIcon} alt='Профиль' />
                         </div>
                         <p>Профиль</p>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/settings" className="avatar-text">
-                        <div className="menu-icon-wrapper">
-                          <img src={settingsIcon} alt="Настройки" />
+                      <Link to='/settings' className='avatar-text'>
+                        <div className='menu-icon-wrapper'>
+                          <img src={settingsIcon} alt='Настройки' />
                         </div>
                         <p>Настройки</p>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/" className="avatar-text">
-                        <div className="menu-icon-wrapper">
-                          <img src={logoutIcon} alt="Выйти" />
+                      <Link to='/' className='avatar-text'>
+                        <div className='menu-icon-wrapper'>
+                          <img src={logoutIcon} alt='Выйти' />
                         </div>
                         <p>Выйти</p>
                       </Link>
@@ -137,123 +137,123 @@ const Home = () => {
           <aside className='left-panel'>
             <ul className='menu-list'>
               <li className='menu-item'>
-                <Link to="/profile" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={profilelIcon} alt="Профиль" />
+                <Link to='/profile' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={profilelIcon} alt='Профиль' />
                   </div>
                   <p>Профиль</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/calendar" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={calendarIcon} alt="Календарь" />
+              <li className='menu-item'>
+                <Link to='/calendar' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={calendarIcon} alt='Календарь' />
                   </div>
                   <p>Календарь</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/messages" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={messagesIcon} alt="Сообщения" />
+              <li className='menu-item'>
+                <Link to='/messages' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={messagesIcon} alt='Сообщения' />
                   </div>
                   <p>Сообщения</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/calls" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={callsIcon} alt="Звонки" />
+              <li className='menu-item'>
+                <Link to='/calls' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={callsIcon} alt='Звонки' />
                   </div>
                   <p>Звонки</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/groups" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={groupsIcon} alt="Группы" />
+              <li className='menu-item'>
+                <Link to='/groups' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={groupsIcon} alt='Группы' />
                   </div>
                   <p>Группы</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/email" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={emailIcon} alt="Почта" />
+              <li className='menu-item'>
+                <Link to='/email' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={emailIcon} alt='Почта' />
                   </div>
                   <p>Почта</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/schedule" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={scheduleIcon} alt="График" />
+              <li className='menu-item'>
+                <Link to='/schedule' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={scheduleIcon} alt='График' />
                   </div>
                   <p>График</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/tasks" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={tasksIcon} alt="Задачи" />
+              <li className='menu-item'>
+                <Link to='/tasks' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={tasksIcon} alt='Задачи' />
                   </div>
                   <p>Задачи</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/events" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={eventsIcon} alt="События" />
+              <li className='menu-item'>
+                <Link to='/events' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={eventsIcon} alt='События' />
                   </div>
                   <p>События</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/gallery" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={galleryIcon} alt="Фотогалерея" />
+              <li className='menu-item'>
+                <Link to='/gallery' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={galleryIcon} alt='Фотогалерея' />
                   </div>
                   <p>Фотогалерея</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/documents" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={documentsIcon} alt="Документы" />
+              <li className='menu-item'>
+                <Link to='/documents' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={documentsIcon} alt='Документы' />
                   </div>
                   <p>Документы</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/requests" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={requestsIcon} alt="Заявки" />
+              <li className='menu-item'>
+                <Link to='/requests' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={requestsIcon} alt='Заявки' />
                   </div>
                   <p>Заявки</p>
                 </Link>
               </li>
             </ul>
             <ul className='support-list'>
-              <li className="menu-item">
-                <Link to="/services" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={servicesIcon} alt="Сервисы" />
+              <li className='menu-item'>
+                <Link to='/services' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={servicesIcon} alt='Сервисы' />
                   </div>
                   <p>Сервисы</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/support" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={supportIcon} alt="Поддержка" />
+              <li className='menu-item'>
+                <Link to='/support' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={supportIcon} alt='Поддержка' />
                   </div>
                   <p>Поддержка</p>
                 </Link>
               </li>
-              <li className="menu-item">
-                <Link to="/settings" className="menu-link">
-                  <div className="menu-icon-wrapper">
-                    <img src={settingsIcon} alt="Настройки" />
+              <li className='menu-item'>
+                <Link to='/settings' className='menu-link'>
+                  <div className='menu-icon-wrapper'>
+                    <img src={settingsIcon} alt='Настройки' />
                   </div>
                   <p>Настройки</p>
                 </Link>
@@ -261,65 +261,65 @@ const Home = () => {
             </ul>
           </aside>
           <main className='main-contacts-content'>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Отдел ИТиС</h2>
-              <p>Телефон: <a href="tel: 1010">1010</a></p>
-              <p>Начальник отдела: <a href="tel: 1011">1011</a></p>
-              <p>Почта: <a href="mailto:it@ft.by">it@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1010'>1010</a></p>
+              <p>Начальник отдела: <a href='tel: 1011'>1011</a></p>
+              <p>Почта: <a href='mailto:it@ft.by'>it@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Отдел кадров</h2>
-              <p>Телефон: <a href="tel: 1012">1012</a></p>
-              <p>Начальник отдела: <a href="tel: 1013">1013</a></p>
-              <p>Почта: <a href="mailto:hr@ft.by">hr@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1012'>1012</a></p>
+              <p>Начальник отдела: <a href='tel: 1013'>1013</a></p>
+              <p>Почта: <a href='mailto:hr@ft.by'>hr@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Бухгалтерия</h2>
-              <p>Телефон: <a href="tel: 1014">1014</a></p>
-              <p>Начальник отдела: <a href="tel: 1015">1015</a></p>
-              <p>Почта: <a href="mailto:accounting@ft.by">accounting@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1014'>1014</a></p>
+              <p>Начальник отдела: <a href='tel: 1015'>1015</a></p>
+              <p>Почта: <a href='mailto:accounting@ft.by'>accounting@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Маркетинговый отдел</h2>
-              <p>Телефон: <a href="tel: 1016">1016</a></p>
-              <p>Начальник отдела: <a href="tel: 1017">1017</a></p>
-              <p>Почта: <a href="mailto:marketing@ft.by">marketing@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1016'>1016</a></p>
+              <p>Начальник отдела: <a href='tel: 1017'>1017</a></p>
+              <p>Почта: <a href='mailto:marketing@ft.by'>marketing@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Коммерческий отдел</h2>
-              <p>Телефон: <a href="tel: 1018">1018</a></p>
-              <p>Начальник отдела: <a href="tel: 1019">1019</a></p>
-              <p>Почта: <a href="mailto:commerc@ft.by">commerc@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1018'>1018</a></p>
+              <p>Начальник отдела: <a href='tel: 1019'>1019</a></p>
+              <p>Почта: <a href='mailto:commerc@ft.by'>commerc@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Отдел продаж</h2>
-              <p>Телефон: <a href="tel: 1020">1020</a></p>
-              <p>Начальник отдела: <a href="tel: 1021">1021</a></p>
-              <p>Почта: <a href="mailto:sales@ft.by">sales@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1020'>1020</a></p>
+              <p>Начальник отдела: <a href='tel: 1021'>1021</a></p>
+              <p>Почта: <a href='mailto:sales@ft.by'>sales@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Юридический отдел</h2>
-              <p>Телефон: <a href="tel: 1022">1022</a></p>
-              <p>Начальник отдела: <a href="tel: 1023">1023</a></p>
-              <p>Почта: <a href="mailto:legal@ft.by">legal@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1022'>1022</a></p>
+              <p>Начальник отдела: <a href='tel: 1023'>1023</a></p>
+              <p>Почта: <a href='mailto:legal@ft.by'>legal@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Отдел логистики</h2>
-              <p>Телефон: <a href="tel: 1024">1024</a></p>
-              <p>Начальник отдела: <a href="tel: 1025">1025</a></p>
-              <p>Почта: <a href="mailto:logistics@ft.by">logistics@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1024'>1024</a></p>
+              <p>Начальник отдела: <a href='tel: 1025'>1025</a></p>
+              <p>Почта: <a href='mailto:logistics@ft.by'>logistics@ft.by</a></p>
             </div>
-            <div className="contacts-block">
-              <h2>Отдел управления качеством</h2>
-              <p>Телефон: <a href="tel: 1026">1026</a></p>
-              <p>Начальник отдела: <a href="tel: 1027">1027</a></p>
-              <p>Почта: <a href="mailto:quality@ft.by">quality@ft.by</a></p>
+            <div className='contacts-block'>
+              <h2>Управление качеством</h2>
+              <p>Телефон: <a href='tel: 1026'>1026</a></p>
+              <p>Начальник отдела: <a href='tel: 1027'>1027</a></p>
+              <p>Почта: <a href='mailto:quality@ft.by'>quality@ft.by</a></p>
             </div>
-            <div className="contacts-block">
+            <div className='contacts-block'>
               <h2>Служба безопасности</h2>
-              <p>Телефон: <a href="tel: 1028">1028</a></p>
-              <p>Начальник отдела: <a href="tel: 1029">1029</a></p>
-              <p>Почта: <a href="mailto:security@ft.by">security@ft.by</a></p>
+              <p>Телефон: <a href='tel: 1028'>1028</a></p>
+              <p>Начальник отдела: <a href='tel: 1029'>1029</a></p>
+              <p>Почта: <a href='mailto:security@ft.by'>security@ft.by</a></p>
             </div>
           </main>
         </div>
@@ -351,4 +351,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Contacts;
