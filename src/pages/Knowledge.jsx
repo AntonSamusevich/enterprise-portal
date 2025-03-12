@@ -1,6 +1,10 @@
-import '../styles/Employees.css';
+import '../styles/Knowledge.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
+import vpnImage from '../images/vpn.jpg';
+import protectionImage from '../images/protection.jpg';
+import memoImage from '../images/memo.jpg';
+import productionImage from '../images/production.jpg';
 import avatarImage from '../images/avatar.png';
 import bellIcon from '../svg/bell.svg';
 import logoIcon from '../svg/logo-ft.svg';
@@ -26,10 +30,11 @@ import instagramIcon from '../svg/instagram.svg';
 import facebookIcon from '../svg/facebook.svg';
 import twitterIcon from '../svg/twitter.svg';
 
-const Employees = () => {
+const Knowledge = () => {
 
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
   const [isBellMenuOpen, setIsBellMenuOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   const avatarMenuRef = useRef(null);
   const bellMenuRef = useRef(null);
@@ -52,6 +57,10 @@ const Employees = () => {
       setIsAvatarMenuOpen(false);
     }
     setIsBellMenuOpen((prev) => !prev);
+  };
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
   };
 
   useEffect(() => {
@@ -138,8 +147,8 @@ const Employees = () => {
           </div>
         </div>
       </header>
-      <div className='employees-container'>
-        <div className='employees-content'>
+      <div className='knowledge-container'>
+        <div className='knowledge-content'>
           <aside className='left-panel'>
             <ul className='menu-list'>
               <li className='menu-item'>
@@ -266,107 +275,167 @@ const Employees = () => {
               </li>
             </ul>
           </aside>
-          <main className='main-employees-content'>
-            <div className='emloyees-search-bar'>
-              <input className='emloyees-input' type='text' placeholder='Поиск сотрудника...' />
-              <select className='emloyees-select'>
-                <option value=''>Все подразделения</option>
-                <option value='1'>Отдел ИТиС</option>
-                <option value='2'>Отдел кадров</option>
-                <option value='3'>Бухгалтерия</option>
-                <option value='4'>Маркетинговый отдел</option>
-                <option value='5'>Коммерческий отдел</option>
-                <option value='6'>Отдел продаж</option>
-                <option value='7'>Юридический отдел</option>
-                <option value='8'>Отдел логистики</option>
-                <option value='9'>Управление качеством</option>
-                <option value='10'>Служба безопасности</option>
+          <main className='main-knowledge-content'>
+            <div className='knowledge-search-bar'>
+              <input className='knowledge-input' type='text' placeholder='Найти в списке...' />
+              <select className='knowledge-select' onChange={handleCategoryChange}>
+                <option value=''>Все направления</option>
+                <option value='IT'>IT</option>
+                <option value='Охрана труда'>Охрана труда</option>
+                <option value='Персонал'>Персонал</option>
+                <option value='Производство'>Производство</option>
               </select>
-              <button className='emloyees-search-button'>Поиск</button>
+              <button className='knowledge-search-button'>Поиск</button>
             </div>
-            <div className='employees-blocks'>
-              <div className='employees-block'>
-                <img src={avatarImage} alt='Аватар' className='employees-image' />
-                <div className='employees-info'>
-                  <h3>Имя Фамилия</h3>
-                  <p>Должность: инженер</p>
-                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
-                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+            <div className='knowledge-blocks'>
+              {(selectedCategory === '' || selectedCategory === 'IT') && (
+                <div className='knowledge-block'>
+                  <div className='knowledge-unit'>
+                    <img src={vpnImage} alt='Аватар' className='knowledge-image' />
+                    <div className='knowledge-info'>
+                      <h2>Как настроить VPN?</h2>
+                      <div className='knowledge-text'>
+                        <div className='knowledge-category'>
+                          <h3>Категория:</h3>
+                          <p>IT</p>
+                        </div>
+                        <div className='knowledge-date'>
+                          <h3>Дата публикации:</h3>
+                          <p>12.03.2025</p>
+                        </div>
+                        <div className='knowledge-description'>
+                          <h3>Описание:</h3>
+                          <p>Руководство для настройки VPN для удаленной работы</p>
+                        </div>
+                        <div className='knowledge-author'>
+                          <h3>Автор:</h3>
+                          <p>Не указано</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button className='knowledge-open-button'>Открыть</button>
                 </div>
-              </div>
-              <div className='employees-block'>
-                <img src={avatarImage} alt='Аватар' className='employees-image' />
-                <div className='employees-info'>
-                  <h3>Имя Фамилия</h3>
-                  <p>Должность: инженер</p>
-                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
-                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+              )}
+              {(selectedCategory === '' || selectedCategory === 'Охрана труда') && (
+                <div className='knowledge-block'>
+                  <div className='knowledge-unit'>
+                    <img src={protectionImage} alt='Аватар' className='knowledge-image' />
+                    <div className='knowledge-info'>
+                      <h2>Охрана труда на рабочем месте</h2>
+                      <div className='knowledge-text'>
+                        <div className='knowledge-category'>
+                          <h3>Категория:</h3>
+                          <p>Охрана труда</p>
+                        </div>
+                        <div className='knowledge-date'>
+                          <h3>Дата публикации:</h3>
+                          <p>12.03.2025</p>
+                        </div>
+                        <div className='knowledge-description'>
+                          <h3>Описание:</h3>
+                          <p>Инструкции по технике безопасности, пожарной безопасности, экстренные процедуры</p>
+                        </div>
+                        <div className='knowledge-author'>
+                          <h3>Автор:</h3>
+                          <p>Не указано</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button className='knowledge-open-button'>Открыть</button>
                 </div>
-              </div>
-              <div className='employees-block'>
-                <img src={avatarImage} alt='Аватар' className='employees-image' />
-                <div className='employees-info'>
-                  <h3>Имя Фамилия</h3>
-                  <p>Должность: инженер</p>
-                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
-                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+              )}
+
+              {(selectedCategory === '' || selectedCategory === 'Персонал') && (
+                <div className='knowledge-block'>
+                  <div className='knowledge-unit'>
+                    <img src={memoImage} alt='Аватар' className='knowledge-image' />
+                    <div className='knowledge-info'>
+                      <h2>Памятка новому сотруднику</h2>
+                      <div className='knowledge-text'>
+                        <div className='knowledge-category'>
+                          <h3>Категория:</h3>
+                          <p>Персонал</p>
+                        </div>
+                        <div className='knowledge-date'>
+                          <h3>Дата публикации:</h3>
+                          <p>12.03.2025</p>
+                        </div>
+                        <div className='knowledge-description'>
+                          <h3>Описание:</h3>
+                          <p>Адаптация сотрудников, обучение, политика отпусков, карьерное развитие</p>
+                        </div>
+                        <div className='knowledge-author'>
+                          <h3>Автор:</h3>
+                          <p>Не указано</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button className='knowledge-open-button'>Открыть</button>
                 </div>
-              </div>
-              <div className='employees-block'>
-                <img src={avatarImage} alt='Аватар' className='employees-image' />
-                <div className='employees-info'>
-                  <h3>Имя Фамилия</h3>
-                  <p>Должность: инженер</p>
-                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
-                  <p>Телефон: <a href='tel:1234'>1234</a></p>
+              )}
+
+              {(selectedCategory === '' || selectedCategory === 'Производство') && (
+                <div className='knowledge-block'>
+                  <div className='knowledge-unit'>
+                    <img src={productionImage} alt='Аватар' className='knowledge-image' />
+                    <div className='knowledge-info'>
+                      <h2>Производственные процессы</h2>
+                      <div className='knowledge-text'>
+                        <div className='knowledge-category'>
+                          <h3>Категория:</h3>
+                          <p>Производство</p>
+                        </div>
+                        <div className='knowledge-date'>
+                          <h3>Дата публикации:</h3>
+                          <p>12.03.2025</p>
+                        </div>
+                        <div className='knowledge-description'>
+                          <h3>Описание:</h3>
+                          <p>Ключевые аспекты фармацевтического производства, включая стандарты, контроль качества и валидацию процессов</p>
+                        </div>
+                        <div className='knowledge-author'>
+                          <h3>Автор:</h3>
+                          <p>Не указано</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button className='knowledge-open-button'>Открыть</button>
                 </div>
-              </div>
-              <div className='employees-block'>
-                <img src={avatarImage} alt='Аватар' className='employees-image' />
-                <div className='employees-info'>
-                  <h3>Имя Фамилия</h3>
-                  <p>Должность: инженер</p>
-                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
-                  <p>Телефон: <a href='tel:1234'>1234</a></p>
-                </div>
-              </div>
-              <div className='employees-block'>
-                <img src={avatarImage} alt='Аватар' className='employees-image' />
-                <div className='employees-info'>
-                  <h3>Имя Фамилия</h3>
-                  <p>Должность: инженер</p>
-                  <p>Почта: <a href='mailto: employee@ft.by'>employee@ft.by</a></p>
-                  <p>Телефон: <a href='tel:1234'>1234</a></p>
-                </div>
-              </div>
+              )}
             </div>
-            <div className='employees-pagination'>
-              <a
-                href='#'
-                className={activePage === 1 ? 'active' : ''}
-                onClick={() => handlePageClick(1)}
-              >
-                1
-              </a>
-              <a
-                href='#'
-                className={activePage === 2 ? 'active' : ''}
-                onClick={() => handlePageClick(2)}
-              >
-                2
-              </a>
-              <a
-                href='#'
-                className={activePage === 3 ? 'active' : ''}
-                onClick={() => handlePageClick(3)}
-              >
-                3
-              </a>
-            </div>
+            {(selectedCategory === '') && (
+              <div className='knowledge-pagination'>
+                <a
+                  href='#'
+                  className={activePage === 1 ? 'active' : ''}
+                  onClick={() => handlePageClick(1)}
+                >
+                  1
+                </a>
+                <a
+                  href='#'
+                  className={activePage === 2 ? 'active' : ''}
+                  onClick={() => handlePageClick(2)}
+                >
+                  2
+                </a>
+                <a
+                  href='#'
+                  className={activePage === 3 ? 'active' : ''}
+                  onClick={() => handlePageClick(3)}
+                >
+                  3
+                </a>
+              </div>
+            )}
           </main>
         </div>
       </div>
-      <footer className='employees-footer'>
+      <footer className='knowledge-footer'>
         <div className='footer-content'>
           <p>© 2025. Все права защищены</p>
           <p>Техподдержка: +375 (17) 123-45-67</p>
@@ -393,4 +462,4 @@ const Employees = () => {
   );
 };
 
-export default Employees;
+export default Knowledge;

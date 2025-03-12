@@ -161,14 +161,14 @@ body {
   color: #3496B5;
 }
 
-.employees-container {
+.knowledge-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 1160px;
 }
 
-.employees-content {
+.knowledge-content {
   display: flex;
   justify-content: space-between;
   width: 1160px;
@@ -240,27 +240,27 @@ body {
   margin-left: 10px;
 }
 
-.main-employees-content {
+.main-knowledge-content {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   width: 940px;
 }
 
-.emloyees-search-bar {
+.knowledge-search-bar {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.emloyees-input {
+.knowledge-input {
   width: 600px;
   height: 40px;
   border: 1px solid #B0AAAA;
 }
 
-.emloyees-select {
+.knowledge-select {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -269,7 +269,7 @@ body {
   border: 1px solid #B0AAAA;
 }
 
-.emloyees-search-button {
+.knowledge-search-button {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -279,63 +279,118 @@ body {
   height: 40px;
 }
 
-.employees-blocks {
+.knowledge-blocks {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.employees-block {
+.knowledge-block {
   background-color: white;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  height: 90px;
+  justify-content: space-between;
+  align-items: end;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.employees-info {
+.knowledge-unit {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  gap: 15px;
 }
 
-.employees-info h3 {
+.knowledge-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 520px;
+}
+
+.knowledge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.knowledge-info h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0;
+}
+
+.knowledge-info h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   margin: 0;
 }
 
-.employees-info p {
+.knowledge-info p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   margin: 0;
 }
 
-.employees-info a {
-  text-decoration: none;
-  color: #1D446F;
+.knowledge-image {
+  height: 160px;
+  width: 250px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
-.employees-image {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+.knowledge-category {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
-.employees-pagination {
+.knowledge-date {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.knowledge-description {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  line-height: 1.5; 
+}
+
+.knowledge-author {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.knowledge-open-button {
+  width: 100px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+}
+
+.knowledge-description p {
+  text-indent: 77px;
+  transform: translateX(-77px);
+  
+}
+
+.knowledge-pagination {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.employees-pagination a {
+.knowledge-pagination a {
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -344,13 +399,13 @@ body {
   background: white;
 }
 
-.employees-pagination a.active {
+.knowledge-pagination a.active {
   background: #31A3C6; 
   color: white; 
   border: none; 
 }
 
-.employees-footer {
+.knowledge-footer {
   width: 100%;
   min-width: 1160px;
   position: relative;

@@ -273,6 +273,7 @@ body {
   width: 270px;
   height: 180px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .education-group {
