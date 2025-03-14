@@ -264,11 +264,6 @@ body {
   overflow: hidden;
 }
 
-.education-block a {
-  text-decoration: none;
-  color: #1D446F;
-}
-
 .education-block img {
   width: 270px;
   height: 180px;
@@ -288,8 +283,7 @@ body {
   height: auto;
   padding: 0;
   margin: 0;
-  color: #5e5a5a;
-
+  color: #7e7d7d;
 }
 
 .education-footer {

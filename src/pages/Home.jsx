@@ -1,9 +1,9 @@
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
-import news1Image from '../images/news1.jpg';
-import news2Image from '../images/news2.jpg';
-import news3Image from '../images/news3.jpg';
+import sportImage from '../images/sport.jpg';
+import trainingImage from '../images/training.jpg';
+import timeImage from '../images/time.jpg';
 import mainImage from '../images/main-image.png';
 import avatarImage from '../images/avatar.png';
 import bellIcon from '../svg/bell.svg';
@@ -279,19 +279,19 @@ const Home = () => {
             </div>
             <div className='second-block'>
               <h2>Новости</h2>
-              <div className='news-container'>
+              <div className='home-news'>
                 <div className='news-item'>
-                  <img src={news1Image} alt='Новость 1' />
+                  <img src={sportImage} alt='Новость 1' />
                   <h3>Спорт – это время заботы о себе</h3>
                   <p>Физическая активность помогает не только поддерживать здоровье, но и снижать стресс</p>
                 </div>
                 <div className='news-item'>
-                  <img src={news2Image} alt='Новость 2' />
+                  <img src={trainingImage} alt='Новость 2' />
                   <h3>Бесплатное обучение для всех сотрудников</h3>
                   <p>Компании все чаще предлагают обучение, которое помогает сотрудникам расти и осваивать новые навыки</p>
                 </div>
                 <div className='news-item'>
-                  <img src={news3Image} alt='Новость 3' />
+                  <img src={timeImage} alt='Новость 3' />
                   <h3>Как успевать все и даже больше?</h3>
                   <p>Эффективное планирование, расстановка приоритетов и правильное распределение энергии – ключи к тому, чтобы успевать больше</p>
                 </div>

@@ -1,10 +1,11 @@
-import '../styles/Knowledge.css';
+import '../styles/News.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
-import vpnImage from '../images/vpn.jpg';
-import protectionImage from '../images/protection.jpg';
-import memoImage from '../images/memo.jpg';
-import productionImage from '../images/production.jpg';
+import birthdayImage from '../images/birthday.jpg';
+import medicineImage from '../images/medicine.jpg';
+import sportImage from '../images/sport.jpg';
+import trainingImage from '../images/training.jpg';
+import timeImage from '../images/time.jpg';
 import avatarImage from '../images/avatar.png';
 import bellIcon from '../svg/bell.svg';
 import logoIcon from '../svg/logo-ft.svg';
@@ -30,19 +31,18 @@ import instagramIcon from '../svg/instagram.svg';
 import facebookIcon from '../svg/facebook.svg';
 import twitterIcon from '../svg/twitter.svg';
 
-const Knowledge = () => {
+const News = () => {
 
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
   const [isBellMenuOpen, setIsBellMenuOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('');
 
   const avatarMenuRef = useRef(null);
   const bellMenuRef = useRef(null);
 
-  const [activePage, setActivePage] = useState(1);
+  const [sortOrder, setSortOrder] = useState('new');
 
-  const handlePageClick = (pageNumber) => {
-    setActivePage(pageNumber);
+  const compareDates = (date1, date2) => {
+    return sortOrder === 'new' ? new Date(date2) - new Date(date1) : new Date(date1) - new Date(date2);
   };
 
   const toggleAvatarMenu = () => {
@@ -275,165 +275,71 @@ const Knowledge = () => {
               </li>
             </ul>
           </aside>
-          <main className='main-knowledge-content'>
-            <div className='knowledge-search-bar'>
-              <input className='knowledge-input' type='text' placeholder='Найти в списке...' />
-              <select className='knowledge-select' onChange={handleCategoryChange}>
-                <option value=''>Все направления</option>
-                <option value='IT'>IT</option>
-                <option value='Охрана труда'>Охрана труда</option>
-                <option value='Персонал'>Персонал</option>
-                <option value='Производство'>Производство</option>
-              </select>
-              <button className='knowledge-search-button'>Поиск</button>
-            </div>
-            <div className='knowledge-blocks'>
-              {(selectedCategory === '' || selectedCategory === 'IT') && (
-                <div className='knowledge-block'>
-                  <div className='knowledge-unit'>
-                    <img src={vpnImage} alt='Аватар' className='knowledge-image' />
-                    <div className='knowledge-info'>
-                      <h2>Как настроить VPN?</h2>
-                      <div className='knowledge-text'>
-                        <div className='knowledge-category'>
-                          <h3>Категория:</h3>
-                          <p>IT</p>
-                        </div>
-                        <div className='knowledge-date'>
-                          <h3>Дата публикации:</h3>
-                          <p>12.03.2025</p>
-                        </div>
-                        <div className='knowledge-description'>
-                          <h3>Описание:</h3>
-                          <p>Руководство для настройки VPN для удаленной работы</p>
-                        </div>
-                        <div className='knowledge-author'>
-                          <h3>Автор:</h3>
-                          <p>Не указано</p>
-                        </div>
-                      </div>
-                    </div>
+          <main className='main-news-content'>
+            <div className="news-checkbox">
+              <div className='checkbox-block'>
+                <div className='checkbox-field'>
+                  <div className={`checkbox ${sortOrder === 'new' ? 'checked' : ''}`} onClick={() => setSortOrder('new')}>
+                    {sortOrder === 'new' && <div className="checkbox-inner"></div>}
                   </div>
-                  <button className='knowledge-open-button'>Открыть</button>
+                  <p onClick={() => setSortOrder('new')}>Последние</p>
                 </div>
-              )}
-              {(selectedCategory === '' || selectedCategory === 'Охрана труда') && (
-                <div className='knowledge-block'>
-                  <div className='knowledge-unit'>
-                    <img src={protectionImage} alt='Аватар' className='knowledge-image' />
-                    <div className='knowledge-info'>
-                      <h2>Охрана труда на рабочем месте</h2>
-                      <div className='knowledge-text'>
-                        <div className='knowledge-category'>
-                          <h3>Категория:</h3>
-                          <p>Охрана труда</p>
-                        </div>
-                        <div className='knowledge-date'>
-                          <h3>Дата публикации:</h3>
-                          <p>12.03.2025</p>
-                        </div>
-                        <div className='knowledge-description'>
-                          <h3>Описание:</h3>
-                          <p>Инструкции по технике безопасности, пожарной безопасности, экстренные процедуры</p>
-                        </div>
-                        <div className='knowledge-author'>
-                          <h3>Автор:</h3>
-                          <p>Не указано</p>
-                        </div>
-                      </div>
-                    </div>
+                <div className='checkbox-field'>
+                  <div className={`checkbox ${sortOrder === 'old' ? 'checked' : ''}`} onClick={() => setSortOrder('old')}>
+                    {sortOrder === 'old' && <div className="checkbox-inner"></div>}
                   </div>
-                  <button className='knowledge-open-button'>Открыть</button>
+                  <p onClick={() => setSortOrder('old')}>Ранние</p>
                 </div>
-              )}
-              {(selectedCategory === '' || selectedCategory === 'Персонал') && (
-                <div className='knowledge-block'>
-                  <div className='knowledge-unit'>
-                    <img src={memoImage} alt='Аватар' className='knowledge-image' />
-                    <div className='knowledge-info'>
-                      <h2>Памятка новому сотруднику</h2>
-                      <div className='knowledge-text'>
-                        <div className='knowledge-category'>
-                          <h3>Категория:</h3>
-                          <p>Персонал</p>
-                        </div>
-                        <div className='knowledge-date'>
-                          <h3>Дата публикации:</h3>
-                          <p>12.03.2025</p>
-                        </div>
-                        <div className='knowledge-description'>
-                          <h3>Описание:</h3>
-                          <p>Адаптация сотрудников, обучение, политика отпусков, карьерное развитие</p>
-                        </div>
-                        <div className='knowledge-author'>
-                          <h3>Автор:</h3>
-                          <p>Не указано</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button className='knowledge-open-button'>Открыть</button>
-                </div>
-              )}
-              {(selectedCategory === '' || selectedCategory === 'Производство') && (
-                <div className='knowledge-block'>
-                  <div className='knowledge-unit'>
-                    <img src={productionImage} alt='Аватар' className='knowledge-image' />
-                    <div className='knowledge-info'>
-                      <h2>Производственные процессы</h2>
-                      <div className='knowledge-text'>
-                        <div className='knowledge-category'>
-                          <h3>Категория:</h3>
-                          <p>Производство</p>
-                        </div>
-                        <div className='knowledge-date'>
-                          <h3>Дата публикации:</h3>
-                          <p>12.03.2025</p>
-                        </div>
-                        <div className='knowledge-description'>
-                          <h3>Описание:</h3>
-                          <p>Ключевые аспекты фармацевтического производства, включая стандарты, контроль качества и валидацию процессов</p>
-                        </div>
-                        <div className='knowledge-author'>
-                          <h3>Автор:</h3>
-                          <p>Не указано</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button className='knowledge-open-button'>Открыть</button>
-                </div>
-              )}
-            </div>
-            {(selectedCategory === '') && (
-              <div className='knowledge-pagination'>
-                <a
-                  href='#'
-                  className={activePage === 1 ? 'active' : ''}
-                  onClick={() => handlePageClick(1)}
-                >
-                  1
-                </a>
-                <a
-                  href='#'
-                  className={activePage === 2 ? 'active' : ''}
-                  onClick={() => handlePageClick(2)}
-                >
-                  2
-                </a>
-                <a
-                  href='#'
-                  className={activePage === 3 ? 'active' : ''}
-                  onClick={() => handlePageClick(3)}
-                >
-                  3
-                </a>
               </div>
-            )}
+            </div>
+            <div className='news-blocks'>
+              {[
+                <div className='news-block' key="1">
+                  <div className='news-text'>
+                    <img src={birthdayImage} alt='Новость 1' className='news-image' />
+                    <p data-date="2025-03-14">14 марта</p>
+                    <a href=''>Наша компания отмечает очередной день рождения! Подводим итоги, вспоминаем ключевые моменты и делимся планами на будущее</a>
+                  </div>
+                </div>,
+                <div className='news-block' key="2">
+                  <div className='news-text'>
+                    <img src={medicineImage} alt='Новость 2' className='news-image' />
+                    <p data-date="2025-03-10">10 марта</p>
+                    <a href=''>Представляем новый препарат, который помогает укрепить иммунитет и защитить организм от вирусов и инфекций</a>
+                  </div>
+                </div>,
+                <div className='news-block' key="3">
+                  <div className='news-text'>
+                    <img src={sportImage} alt='Новость 3' className='news-image' />
+                    <p data-date="2025-03-02">2 марта</p>
+                    <a href=''>Физическая активность помогает не только поддерживать здоровье, но и снижать стресс</a>
+                  </div>
+                </div>,
+                <div className='news-block' key="4">
+                  <div className='news-text'>
+                    <img src={trainingImage} alt='Новость 4' className='news-image' />
+                    <p data-date="2025-02-26">26 февраля</p>
+                    <a href=''>Компании все чаще предлагают обучение, которое помогает сотрудникам расти и осваивать новые навыки</a>
+                  </div>
+                </div>,
+                <div className='news-block' key="5">
+                  <div className='news-text'>
+                    <img src={timeImage} alt='Новость 5' className='news-image' />
+                    <p data-date="2025-02-18">18 февраля</p>
+                    <a href=''>Эффективное планирование, расстановка приоритетов и правильное распределение энергии – ключи к тому, чтобы успевать больше</a>
+                  </div>
+                </div>
+              ]
+                .sort((a, b) => {
+                  const dateA = a.props.children.props.children[1].props['data-date']; // Получаем атрибут data-date у <p>
+                  const dateB = b.props.children.props.children[1].props['data-date'];
+                  return compareDates(dateA, dateB);
+                })}
+            </div>
           </main>
         </div>
       </div>
-      <footer className='knowledge-footer'>
+      <footer className='news-footer'>
         <div className='footer-content'>
           <p>© 2025. Все права защищены</p>
           <p>Техподдержка: +375 (17) 123-45-67</p>
@@ -460,4 +366,4 @@ const Knowledge = () => {
   );
 };
 
-export default Knowledge;
+export default News;

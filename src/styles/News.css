@@ -43,7 +43,7 @@ body {
 }
 
 .user-panel {
-  position: relative; 
+  position: relative;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -161,14 +161,14 @@ body {
   color: #3496B5;
 }
 
-.home-container {
+.news-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 1160px;
 }
 
-.home-content {
+.news-content {
   display: flex;
   justify-content: space-between;
   width: 1160px;
@@ -240,168 +240,105 @@ body {
   margin-left: 10px;
 }
 
-.main-home-content {
+.main-news-content {
   display: flex;
   flex-direction: column;
+}
+
+.news-checkbox {
+  display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.first-block {
-  width: 680px;
-  height: 360px;
+  user-select: none;
   background-color: white;
+  margin-bottom: 20px;
   border-radius: 5px;
-  position: relative;
-  overflow: hidden;
+  height: 40px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.first-block img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.first-block .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: end;
-}
-
-.text-content {
-  margin-left: 50px;
-}
-
-.first-block h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  padding: 0;
-}
-
-.first-block p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.main-text {
-  width: 250px;
-  color: #31A3C6;
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
-.main-button {
-  width: 170px;
-  height: 46px;
-  background-color: #31A3C6;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  border-radius: 5px;
-  margin: 0;
-  margin: 30px 0 50px 0;
-}
-
-.main-button:hover {
-  background-color: #3496B5;
-}
-
-.second-block {
-  width: 680px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.second-block h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  padding: 0;
-  margin: 25px 25px 25px 20px;
-  height: 18px;
-}
-
-.home-news {
+.checkbox-block {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0 20px;
+  align-items: center;
+  gap: 15px;
+  padding-left: 15px;
 }
 
-.news-item {
-  width: 200px;
+.checkbox-field {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin: 0;
 }
 
-.news-item img {
-  width: 200px;
-  height: 140px;
+.checkbox-field p {
+  font-size: 14px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #B0AAAA;
   border-radius: 5px;
-  object-fit: cover;
-  margin: 0;
-}
-
-.news-item h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  margin: 0;
-  margin: 10px 0 8px 0;
-  height: 34px;
-  overflow: hidden;
-}
-
-.news-item p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 15px;
-  height: 85px;
-  overflow: hidden;
-}
-
-.right-panel {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
 }
 
-.right-block {
-  width: 240px;
-  height: 360px;
+.checkbox.checked {
+  border: none;
+  border-radius: 5px;
+}
+
+.checkbox-inner {
+  width: 16px;
+  height: 16px;
+  background-color: #31A3C6;
+  border-radius: 5px;
+}
+
+.news-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  width: 940px;
+}
+
+.news-block {
   background-color: white;
   border-radius: 5px;
   display: flex;
-  align-items: end;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  height: 310px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.open-button {
-  width: 130px;
-  height: 36px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  margin: 30px 0 25px 0;
+.news-image {
+  width: 270px;
+  height: 180px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
-.home-footer {
+.news-text p {
+  padding: 15px 0;
+  color: #7e7d7d;
+  font-size: 14px;
+}
+
+.news-text a {
+  text-decoration: none;
+  color: #1D446F;
+  font-size: 14px;
+}
+
+.news-footer {
   width: 100%;
   min-width: 1160px;
   position: relative;
