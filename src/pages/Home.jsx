@@ -2,6 +2,7 @@ import '../styles/Home.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
 import Calendar from '../components/Calendar';
+import Chart from '../components/Chart';
 import sportImage from '../images/sport.jpg';
 import trainingImage from '../images/training.jpg';
 import timeImage from '../images/time.jpg';
@@ -305,6 +306,7 @@ const Home = () => {
               <button className='first-open-button'>Открыть</button>
             </div>
             <div className='second-right-block'>
+              <Chart />
               <button className='second-open-button'>Открыть</button>
             </div>
           </aside>

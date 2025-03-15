@@ -1,0 +1,52 @@
+.chart-container {
+  width: 210px;
+  height: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.chart-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+}
+
+text {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  cursor: pointer;
+}
+
+.legend-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+}
+
+.legend-item {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.legend-labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-labels p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}

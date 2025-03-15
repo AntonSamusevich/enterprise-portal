@@ -58,7 +58,7 @@ const Calendar = () => {
 
           return (
             <div key={day} className={`calendar-day ${isToday ? 'today' : ''}`}>
-              {day}
+              <span>{day}</span>
             </div>
           );
         })}
