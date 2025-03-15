@@ -276,7 +276,7 @@ body {
 }
 
 .text-content {
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 .first-block h2 {
@@ -302,7 +302,7 @@ body {
 
 .main-button {
   width: 170px;
-  height: 46px;
+  height: 40px;
   background-color: #31A3C6;
   color: white;
   border: none;
@@ -312,7 +312,7 @@ body {
   font-size: 15px;
   border-radius: 5px;
   margin: 0;
-  margin: 30px 0 50px 0;
+  margin: 30px 0 60px 0;
 }
 
 .main-button:hover {
@@ -330,8 +330,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
+  margin: 20px;
   padding: 0;
-  margin: 25px 25px 25px 20px;
   height: 18px;
 }
 
@@ -360,8 +360,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  margin: 0;
-  margin: 10px 0 8px 0;
+  margin: 14px 0;
+  padding: 0;
   height: 34px;
   overflow: hidden;
 }
@@ -381,24 +381,46 @@ body {
   gap: 20px;
 }
 
-.right-block {
+.first-right-block {
   width: 240px;
   height: 360px;
   background-color: white;
   border-radius: 5px;
   display: flex;
-  align-items: end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.open-button {
+.second-right-block {
+  width: 240px;
+  height: 360px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+.first-open-button {
   width: 130px;
   height: 36px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  margin: 30px 0 25px 0;
+  margin: 0;
+}
+
+.second-open-button {
+  width: 130px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 0 25px 0;
 }
 
 .home-footer {

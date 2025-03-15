@@ -279,15 +279,11 @@ const News = () => {
             <div className="news-checkbox">
               <div className='checkbox-block'>
                 <div className='checkbox-field'>
-                  <div className={`checkbox ${sortOrder === 'new' ? 'checked' : ''}`} onClick={() => setSortOrder('new')}>
-                    {sortOrder === 'new' && <div className="checkbox-inner"></div>}
-                  </div>
+                  <div className={`checkbox ${sortOrder === 'new' ? 'checked' : ''}`} onClick={() => setSortOrder('new')}></div>
                   <p onClick={() => setSortOrder('new')}>Последние</p>
                 </div>
                 <div className='checkbox-field'>
-                  <div className={`checkbox ${sortOrder === 'old' ? 'checked' : ''}`} onClick={() => setSortOrder('old')}>
-                    {sortOrder === 'old' && <div className="checkbox-inner"></div>}
-                  </div>
+                  <div className={`checkbox ${sortOrder === 'old' ? 'checked' : ''}`} onClick={() => setSortOrder('old')}></div>
                   <p onClick={() => setSortOrder('old')}>Ранние</p>
                 </div>
               </div>
@@ -298,35 +294,35 @@ const News = () => {
                   <div className='news-text'>
                     <img src={birthdayImage} alt='Новость 1' className='news-image' />
                     <p data-date="2025-03-14">14 марта</p>
-                    <a href=''>Наша компания отмечает очередной день рождения! Подводим итоги, вспоминаем ключевые моменты и делимся планами на будущее</a>
+                    <a href='#'>Наша компания отмечает очередной день рождения! Подводим итоги, вспоминаем ключевые моменты и делимся планами на будущее</a>
                   </div>
                 </div>,
                 <div className='news-block' key="2">
                   <div className='news-text'>
                     <img src={medicineImage} alt='Новость 2' className='news-image' />
                     <p data-date="2025-03-10">10 марта</p>
-                    <a href=''>Представляем новый препарат, который помогает укрепить иммунитет и защитить организм от вирусов и инфекций</a>
+                    <a href='#'>Представляем новый препарат, который помогает укрепить иммунитет и защитить организм от вирусов и инфекций</a>
                   </div>
                 </div>,
                 <div className='news-block' key="3">
                   <div className='news-text'>
                     <img src={sportImage} alt='Новость 3' className='news-image' />
                     <p data-date="2025-03-02">2 марта</p>
-                    <a href=''>Физическая активность помогает не только поддерживать здоровье, но и снижать стресс</a>
+                    <a href='#'>Физическая активность помогает не только поддерживать здоровье, но и снижать стресс</a>
                   </div>
                 </div>,
                 <div className='news-block' key="4">
                   <div className='news-text'>
                     <img src={trainingImage} alt='Новость 4' className='news-image' />
                     <p data-date="2025-02-26">26 февраля</p>
-                    <a href=''>Компании все чаще предлагают обучение, которое помогает сотрудникам расти и осваивать новые навыки</a>
+                    <a href='#'>Компании все чаще предлагают обучение, которое помогает сотрудникам расти и осваивать новые навыки</a>
                   </div>
                 </div>,
                 <div className='news-block' key="5">
                   <div className='news-text'>
                     <img src={timeImage} alt='Новость 5' className='news-image' />
                     <p data-date="2025-02-18">18 февраля</p>
-                    <a href=''>Эффективное планирование, расстановка приоритетов и правильное распределение энергии – ключи к тому, чтобы успевать больше</a>
+                    <a href='#'>Эффективное планирование, расстановка приоритетов и правильное распределение энергии – ключи к тому, чтобы успевать больше</a>
                   </div>
                 </div>
               ]

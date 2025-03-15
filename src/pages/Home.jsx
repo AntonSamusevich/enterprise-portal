@@ -1,6 +1,7 @@
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
+import Calendar from '../components/Calendar';
 import sportImage from '../images/sport.jpg';
 import trainingImage from '../images/training.jpg';
 import timeImage from '../images/time.jpg';
@@ -299,11 +300,12 @@ const Home = () => {
             </div>
           </main>
           <aside className='right-panel'>
-            <div className='right-block'>
-              <button className='open-button'>Открыть</button>
+            <div className='first-right-block'>
+              <Calendar />
+              <button className='first-open-button'>Открыть</button>
             </div>
-            <div className='right-block'>
-              <button className='open-button'>Открыть</button>
+            <div className='second-right-block'>
+              <button className='second-open-button'>Открыть</button>
             </div>
           </aside>
         </div>
