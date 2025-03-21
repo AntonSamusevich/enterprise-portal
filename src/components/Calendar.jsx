@@ -27,11 +27,6 @@ const Calendar = () => {
   const firstDay = getFirstDayOfMonth();
   const daysInMonth = getDaysInMonth();
 
-  const days = [];
-  for (let i = 1; i <= daysInMonth; i++) {
-    days.push(i);
-  }
-
   return (
     <div className="calendar">
       <div className="calendar-header">
@@ -50,7 +45,7 @@ const Calendar = () => {
         {Array.from({ length: firstDay }).map((_, index) => (
           <div key={index} className="calendar-empty-cell"></div>
         ))}
-        {days.map((day) => {
+        {Array.from({ length: daysInMonth }, (_, i) => i + 1).map((day) => {
           const isToday =
             day === today.getDate() &&
             currentDate.getMonth() === today.getMonth() &&
@@ -58,7 +53,11 @@ const Calendar = () => {
 
           return (
             <div key={day} className={`calendar-day ${isToday ? 'today' : ''}`}>
-              <span>{day}</span>
+              <span className="day-content">
+                {day.toString().split('').map((digit, i) => (
+                  <span key={i} className={`digit ${digit === "1" ? "one" : ""}`}>{digit}</span>
+                ))}
+              </span>
             </div>
           );
         })}

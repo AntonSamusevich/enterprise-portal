@@ -76,16 +76,17 @@
   width: 20px;
   height: 20px;
   padding: 5px;
-  position: relative;
-  right: -1px;
+}
+
+.calendar-day span .digit {
+  display: inline-block;
+  text-align: center;
+}
+
+.one {
+  width: 7.2px;
 }
 
 .calendar-empty-cell {
   visibility: hidden;
-}
-
-.calendar-day span {
-  position: relative;
-  left: -0.5px;
-  top: 0.5px;
 }
